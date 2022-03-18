@@ -3,16 +3,15 @@ import { ThemesContext } from "../../themes/themes";
 import './Main.css'
 
 const Main = props => {
-	const { toggleTheme } = props
 	const theme = useContext(ThemesContext)
 
 
 
 	return (
-		<div className="main" style={{ background: theme.background, color: theme.textColor }}>
-			<button type="button" onClick={toggleTheme} >toggleTheme</button>
-			<p>Lorem</p>
-		</div>
+		<main className="main" style={{ background: theme.background, color: theme.textColor }}>
+			
+			<p>main</p>
+		</main>
 	)
 
 
