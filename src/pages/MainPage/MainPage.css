@@ -1,0 +1,102 @@
+.main{
+	height: 600vh;
+	padding-top: 7rem;
+	/* font-family: 'Exo 2', sans-serif; */
+	font-family: 'Montserrat', sans-serif;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.main section{
+	display: flex;
+	margin-bottom: 2em;
+
+}
+.main__title{
+	min-width: 50%;
+	padding: 10px 10px 10px 10px;
+	
+}
+.main__title h1{
+	font-size: 3em;
+	margin-top: 1em;
+}
+.main__title h1 span{
+	display: block;
+}
+.main__title h1 span:nth-child(1){
+	display: inline;
+	text-transform: uppercase;
+}
+.main__title h1 span:nth-child(2){
+	display: inline;
+}
+
+.main__title h1 span a:hover{
+	color: rgb(169, 31, 182) !important;
+}
+.mainbox__btn{
+	width: 100%;
+	text-align: end;
+}
+.btn__more-detailed{
+	font-size: 1.5em;
+	background: transparent;
+	margin-right: 3.5em;
+	margin-top: 2em;
+}
+.btn__more-detailed:hover{
+	color: #0f0 !important;
+}
+.main__section2, .main__section3, .main__section4{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 3em;
+}
+.section2__box1, .section3__box1, .section4__box1{
+	width: 20%;
+	border-top: 2px solid #0f0;
+}
+.section2__box1 h2, .section3__box1 h2, .section4__box1 h2{
+	font-size: 2em;
+	margin: 10px 0px 20px 0px;
+}
+.section2__box1 p, .section3__box1 p, .section4__box1 p{
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.2;
+	transition: 0.5s;
+}
+.section2__box1 p:hover, .section3__box1 p:hover, .section4__box1 p:hover{
+	margin-top: 3.5em;
+	transform: scale(1.2);
+}
+.section2__box1:hover a, .section3__box1:hover a, .section4__box1:hover a{
+	color: #0f0 !important;
+	border-bottom: 1px solid #0f0 !important;
+}
+.section2__box1 span, .section3__box1 span, .section4__box1 span{
+	float: right;
+	margin-top: 1.5em;
+}
+.section2__box1 span:hover, .section3__box1 span:hover, .section4__box1 span:hover{
+	color: #0f0 !important;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.section2__box2, .section3__box2, .section4__box2{
+	width: 70%;
+	text-align: center;
+}
+.section2__box2 img, .section3__box2 img, .section4__box2 img{
+	width: 65%;
+}
+.section2__box3-info, .section3__box3-info, .section4__box3-info{
+	width: 15%;
+	text-align: center;
+}
+.section2__box3-info h3, .section3__box3-info h3, .section4__box3-info h3{
+	padding-bottom: 5px;
+}

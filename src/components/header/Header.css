@@ -1,15 +1,20 @@
 .header{
 	position: fixed;
 	top: 0;
-	width: 100%;
+	left: 0;
+	right: 0;
+	/* width: 100vw; */
 	padding-top: 1em;
+	padding-bottom: 1em;
+	z-index: 10;
+}
+.container__header{
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 auto;
 }
-/* .header__block{
-	
-} */
 .logo__tech{
 	background: transparent;
 	padding: 0.3rem 0.5rem;
@@ -22,7 +27,9 @@
 	background: #30C665;
 	/* background: #0f0; */
 }
-
+/* .v__tech{
+	color: #9328ef !important;
+} */
 .nav ul
 {
 	position: relative;
@@ -111,4 +118,11 @@
 .header__phone{
 	font-family: 'Audiowide', cursive;
 	font-size: 1.5em;
+	color: #0f0;
+}
+.header__phone:hover{
+	color: rgb(169, 31, 182);
+}
+.header__btn{
+	background: transparent;
 }

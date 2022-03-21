@@ -36,6 +36,8 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .app{
-	height: 200vh;
+	height: 100vh;
 	width: 100%;
+	display: flex;
+	justify-content: center;
 }
