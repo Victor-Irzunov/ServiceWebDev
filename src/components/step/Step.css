@@ -1,0 +1,72 @@
+.main__step{
+	height: 50vh;
+	width: 100%;
+	background: url('./fiolet.webp') no-repeat;
+	/* background: #00fdcf; */
+	/* background: #0c51fd; */
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.step{
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+}
+.step__box{
+	display: flex;
+}
+.step h2{
+	color: rgba(255, 255, 255, 0.801);
+	font-size: 4em;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.box
+{
+	position: relative;
+	width: 250px;
+	height: 200px;
+	margin: 30px;
+	padding: .5em;
+	font-size: 1.5em;
+	border-radius: 15px;
+	color: rgba(255, 255, 255, 0.664);
+}
+.box p:nth-child(1){
+	margin-bottom: 1em;
+}
+.box .fa{
+	font-size: 2em;;
+}
+.box p:nth-child(3){
+	margin-top: 1em;
+}
+/* .box.shadow2
+{
+  box-shadow: -10px -10px 10px rgba(255,255,255,0.2),
+              15px 15px 15px rgba(0,0,0,0.1),
+            inset -5px -5px 5px rgba(255,255,255,0.2),
+             inset 5px 5px 5px rgba(0,0,0,0.1);
+} */
+.box.shadow3
+{
+  box-shadow: inset 4px 4px 5px rgba(255,255,255,0.3),
+              inset -4px -4px 5px rgba(0,0,0,0.1),
+              10px 40px 40px rgba(0,0,0,0.1);
+}
+/* .box.shadow4
+{
+  border: 10px solid var(--blue);
+  box-shadow: -10px -10px 10px rgba(255,255,255,0.2),
+              15px 15px 15px rgba(0,0,0,0.1),
+              inset -10px -10px 10px rgba(255,255,255,0.2),
+              inset 15px 15px 15px rgba(0,0,0,0.1)
+} */
+.box.shadow3.active{
+	box-shadow: -10px -10px 10px rgba(255,255,255,0.2),
+              15px 15px 15px rgba(0,0,0,0.1),
+            inset -5px -5px 5px rgba(255,255,255,0.2),
+             inset 5px 5px 5px rgba(0,0,0,0.1);
+}

@@ -11,7 +11,14 @@ const Slider = () => {
 
 
 	return (
-		<Carousel autoPlay={true} infiniteLoop={true} thumbWidth={50} width={'100%'}>
+		<Carousel
+			autoPlay={true}
+			infiniteLoop={true}
+			thumbWidth={50}
+			width={'100%'}
+			showStatus={false}
+			showThumbs={false}
+		>
 			<div>
 				<img src={sliderImg1} />
 				<p className="legend">Legend 1</p>

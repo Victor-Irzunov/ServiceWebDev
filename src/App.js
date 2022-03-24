@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage/ContactPage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import ServicePage from './pages/ServicePage/ServicePage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
-import Form from "./components/form/Form"
+import Footer from "./components/footer/Footer"
 
 function App() {
   const theme = useContext(ThemesContext)
@@ -22,18 +22,20 @@ function App() {
     <>
       <ThemesContext.Provider value={currentTheme}>
         <div className="app">
-          
-            <Header toggleTheme={toggleTheme} />
 
-            <Routes>
-              <Route path='/' element={<MainPage />} />
-              <Route path='/service' element={<ServicePage />} />
-              <Route path='/about' element={<AboutPage />} />
-              <Route path='/contact' element={<ContactPage />} />
-              <Route path='*' element={<ErrorPage />} />
-            </Routes>
+          <Header toggleTheme={toggleTheme} />
+
+          <Routes>
+            <Route path='/' element={<MainPage />} />
+            <Route path='/service' element={<ServicePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='*' element={<ErrorPage />} />
+          </Routes>
+
+          <Footer />
         </div>
-        
+
       </ThemesContext.Provider>
     </>
   );
