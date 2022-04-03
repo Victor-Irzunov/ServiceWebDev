@@ -6,7 +6,9 @@
 	/* width: 100vw; */
 	padding-top: 1em;
 	padding-bottom: 1em;
-	z-index: 10;
+	z-index: 101;
+	overflow: hidden;
+	/* opacity: .8; */
 }
 .container__header{
 	width: 90%;
@@ -15,29 +17,30 @@
 	align-items: center;
 	margin: 0 auto;
 }
+.logo__img{
+	max-width: 4.7em;
+}
 .logo__tech{
 	background: transparent;
-	padding: 0.3rem 0.5rem;
 	max-width: 4.7em;
 	border-radius: 0.2em;
-	font-family: 'Audiowide', cursive;
 	font-size: 3em;
 }
-.logo__tech.active{
-	background: #30C665;
-	/* background: #0f0; */
-}
-/* .v__tech{
-	color: #9328ef !important;
+/* .logo__tech{
+	color: #000;
+	text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 90px #00ff00, 0 0 100px #00ff00;
 } */
+
 .nav ul
 {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Exo 2', sans-serif;
+	/* font-family: 'Exo 2', sans-serif; */
+	font-family: 'Ubuntu', sans-serif;
 	font-style: 2em;
+	margin-bottom: 0px !important;
 }
 .nav ul li
 {
@@ -101,28 +104,38 @@
 	height: 50px;
 	border-radius: 50%;
 	transition: 0.5s;
-	background: #0f0;
-	box-shadow: 0 0 15px #0f0,
-				0 0 30px #0f0,
-				0 0 45px #0f0,
-				0 0 60px #0f0;
+	background: #3fabe2;
+	box-shadow: 0 0 15px #3fabe2,
+				0 0 30px #3fabe2,
+				0 0 45px #3fabe2,
+				0 0 60px #3fabe2;
 }
 .nav ul li:hover ~ #marker:before
 {
-	background: #0f0;
-	box-shadow: 0 0 15px #0f0,
-				0 0 30px #0f0,
-				0 0 45px #0f0,
-				0 0 60px #0f0;
+	background: #00bcd4;
+	box-shadow: 0 0 15px #4bd4e8,
+				0 0 30px #4bd4e8,
+				0 0 45px #4bd4e8,
+				0 0 60px #4bd4e8;
 }
 .header__phone{
-	font-family: 'Audiowide', cursive;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 1.5em;
-	color: #0f0;
+	font-weight: 700;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to top, #0cf2ff, #0cf2ff);
+	/* background-image: linear-gradient(to top, #577de6, #0cf2ff); */
+	/* -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+  -webkit-text-fill-color: rgba(0,0,0,0.1); */
 }
 .header__phone:hover{
-	color: rgb(169, 31, 182);
+	color: #366dff;
 }
 .header__btn{
 	background: transparent;
+}
+.header__theme{
+	width: 3.5em;
 }

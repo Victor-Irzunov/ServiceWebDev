@@ -45,7 +45,7 @@ const Step = props => {
 								onClick={() => setClassBox3(i => !i)}
 							>
 								<p>Шаг 3</p>
-								<i class="fa fa-file-image-o" aria-hidden="true" />
+								<i className="fa fa-file-image-o" aria-hidden="true" />
 								<p>Дизайн, разработка и тестирование</p>
 							</div>
 

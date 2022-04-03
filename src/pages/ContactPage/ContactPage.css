@@ -1,4 +1,113 @@
 .contact{
-	padding-top: 5rem;
+	padding-top: 10rem;
 	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+}
+.contact-container{
+	margin: 0 auto;
+	width: 90%;
+}
+.contact-fon{
+	background: url('./image/contactImg.jpeg') no-repeat center;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position-y: 100px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.contact-fon.active::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.7;
+	z-index: 1;
+}
+.contact-fon::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	opacity: 0.4;
+	z-index: 1;
+}
+.contact section{
+	margin-bottom: 5em;
+	/* text-align:start; */
+}
+.contact section h2{
+	margin-left: 10px;
+	font-size: 5em;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	/* background-image: linear-gradient(to top, rgba(91, 129, 233,1), rgba(12, 242, 255,1)); */
+	background-image: linear-gradient(to top, rgba(12, 242, 255,1), rgba(12, 242, 255,1));
+	margin-bottom: 1em;
+}
+.contact-block{
+	display: flex;
+	/* flex: 1; */
+}
+.contact-block .contact-box-1{
+	width: 50%;
+}
+.contact-block .contact-box{
+	width: 50%;
+	text-align: left;
+}
+.contact-box p{
+	margin-bottom: 1.7em;
+	font-size: 2em;
+}
+.contact-box .adress address{
+	font-style: normal;
+}
+.contact-box .adress .fa.fa-map-marker{
+	font-size: 1.2em;
+	margin-right: 1em;
+}
+.adress:hover{
+	color:  #0cf2ff !important;
+}
+
+.contact-phone .fa.fa-mobile{
+	font-size: 2em;
+	margin-right: 1em;
+	vertical-align: middle;
+}
+.contact-phone:hover{
+	color:  #0cf2ff !important;
+}
+.contact-mail{
+	
+	-webkit-text-stroke: 1px rgba(0,0,0,0.5);
+	-webkit-text-fill-color: rgba(0,0,0,0.1);
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(rgba(12, 242, 255,1), rgba(12, 242, 255,1));
+	font-weight: 600;
+}
+.contact-mail .fa.fa-envelope-o{
+	margin-right: 1em;
+	-webkit-text-stroke: 1px rgba(0,0,0,0.5);
+	-webkit-text-fill-color: rgba(0,0,0,0.1);
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(rgba(12, 242, 255,1), rgba(12, 242, 255,1));
+	/* font-weight: 700; */
+}
+.contact-mail:hover{
+	color:  #fff !important;
 }

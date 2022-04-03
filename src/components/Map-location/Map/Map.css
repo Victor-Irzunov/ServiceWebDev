@@ -1,0 +1,22 @@
+.map{
+	width: 100%;
+	height: 100vh;
+	
+}
+/* .address-search{
+	width:50%;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: space-between;
+	z-index: 11;
+	
+}
+.markers{
+	padding: 5px 5px 5px 5px;
+	font-size: 1.3em;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 5px;
+} */

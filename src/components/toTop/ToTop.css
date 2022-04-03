@@ -1,0 +1,34 @@
+.scroll-top
+{
+	position: fixed;
+	bottom: 800px;
+	right: 15px;
+	cursor: pointer;
+	z-index: 100000;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+
+	transform: rotate(-90deg);
+}
+.top-text{
+	font-size: 1em;
+	color: #fff;
+}
+.fa.fa-arrow-up{
+	transform: rotate(90deg);
+	vertical-align: middle;
+	margin-left: 1em;
+}
+.scroll-top.active
+{
+	bottom: 60px;
+	visibility: visible;
+	opacity: 1;
+}
+.scroll-top:hover{
+	color: #ff3b7e !important;
+}
+.top-text:hover{
+	color: #ff3b7e !important;
+}

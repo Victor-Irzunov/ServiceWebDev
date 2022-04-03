@@ -1,7 +1,7 @@
 .main__step{
 	height: 50vh;
 	width: 100%;
-	background: url('./fiolet.webp') no-repeat;
+	background: url('./fiolet-section.webp') no-repeat;
 	/* background: #00fdcf; */
 	/* background: #0c51fd; */
 }
@@ -33,6 +33,7 @@
 	font-size: 1.5em;
 	border-radius: 15px;
 	color: rgba(255, 255, 255, 0.664);
+	cursor: pointer;
 }
 .box p:nth-child(1){
 	margin-bottom: 1em;

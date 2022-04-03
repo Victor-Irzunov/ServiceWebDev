@@ -1,0 +1,36 @@
+.autocomplite{
+	position: relative;
+	width: 100%;
+}
+.autocomplite-input{
+	/* width: 0%;  */
+	padding: 5px 10px 5px 10px;
+	font-size: 1.3em;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+.autocomplite-input:focus{
+	border-color: blueviolet;
+	outline: none;
+}
+.suggestion{
+	position: absolute;
+	top: 0;
+	transform: translateY(39px);
+	background: #fff;
+	width: 70%;
+	color: #000;
+	z-index: 105;
+	margin: 0px 0px 0px 0px;
+	list-style: none;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	border-radius: 5px;
+}
+.list-item{
+	padding: 10px 15px;
+	cursor: pointer;
+}
+.list-item:hover{
+	background: #3592ad;
+}

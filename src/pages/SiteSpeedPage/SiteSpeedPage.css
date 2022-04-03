@@ -1,0 +1,50 @@
+.side-speed{
+	padding-top: 10em;
+	height: auto;
+	font-family: 'Ubuntu', sans-serif;
+	padding-bottom: 3em;
+}
+.side-speed-container{
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+}
+.side-speed section article h2{
+	font-size: 3em;
+	color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	/* background-image: linear-gradient(to top, #577de6, #0cf2ff); */
+	background-image: linear-gradient(to top, #0cf2ff, #0cf2ff);
+	margin-bottom: 2em;
+	padding: 5px 5px 5px 5px;
+}
+.side-speed section article p
+{
+	font-size: 1.2em;
+	line-height: 1.3;
+	text-align: justify;
+	margin-bottom: 1em
+}
+.image-speed{
+	width: 500px;
+	float: left;
+	shape-outside: url(./images/speed.png);
+	/* important : local or web server is required to perform this action */
+	margin-right: 30px;
+	shape-margin: 30px;
+}
+.begin-speed{
+	font-size: 1.5;
+	font-weight: bold;
+}
+.title-speed{
+	font-size: 1.5;
+	font-weight: bold;
+}
+.seo-link{
+	font-size: 1.2em;
+	text-decoration: underline;
+	color: rgba(12, 242, 255,1);
+	float: left;
+}

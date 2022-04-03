@@ -1,35 +1,123 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useCallback, useEffect } from "react"
 import { Routes, Route, Link } from "react-router-dom"
+import { useJsApiLoader } from '@react-google-maps/api'
+import { getBrowserLocation } from './utils/geo'
+import {
+  // Map,
+  MODES
+} from './components/Map-location/Map'
 import { ThemesContext, themes } from './themes/themes'
 import './App.css'
 import Header from "./components/header/Header"
 import MainPage from "./pages/MainPage/MainPage"
 import ContactPage from './pages/ContactPage/ContactPage'
 import AboutPage from './pages/AboutPage/AboutPage'
-import ServicePage from './pages/ServicePage/ServicePage'
+import ServicePage3 from './pages/ServicePage3/ServicePage3'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 import Footer from "./components/footer/Footer"
+// import { Autocomplete } from './components/Autocomplete'
+import SideSpeedtPage from './pages/SiteSpeedPage/SiteSpeedPage'
+import { SeoPage }from './pages/SeoPage/SeoPage'
+
+
+const defaultCenter = {
+  lat: 53.9327511,
+  lng: 27.6551419
+}
+
+
 
 function App() {
   const theme = useContext(ThemesContext)
-  const [currentTheme, setCurrentTheme] = useState(themes.ligth)
+  const [currentTheme, setCurrentTheme] = useState(themes.dark)
+  const [center, setCenter] = useState(defaultCenter)
+  const [centerUser, setCenterUser] = useState(defaultCenter)
+  const [mode, setMode] = useState(MODES.MOVE)
+  const [markers, setMarkers] = useState([])
+
+  const API_KEY = process.env.REACT_APP_API_KEY
+  const libraries = ['places']
+
+  // const { isLoaded } = useJsApiLoader({
+  //   id: 'google-map-script',
+  //   googleMapsApiKey: API_KEY,
+  //   libraries
+  // })
+
+  useEffect(() => {
+    getBrowserLocation()
+      .then(curLoc => {
+        setCenterUser(curLoc)
+      })
+      .catch(defaultLocation => {
+        setCenterUser(defaultLocation)
+      })
+  }, [])
+
+  const toggleTheme = () => {
+    setCurrentTheme(prevTheme => prevTheme === themes.dark
+      ? themes.ligth : themes.dark)
+  }
+
+  const toggleMode = useCallback(() => {
+    switch (mode) {
+      case MODES.MOVE:
+        setMode(MODES.SET_MARKER);
+        break;
+      case MODES.SET_MARKER:
+        setMode(MODES.MOVE)
+        break;
+
+      default:
+        setMode(MODES.MOVE)
+    }
+  }, [mode])
 
 
-  const toggleTheme = () => setCurrentTheme(prevTheme => prevTheme === themes.ligth ? themes.dark : themes.ligth)
+  const onPlaceSelect = useCallback(coordinates => {
+    setCenter(coordinates)
+  }, [])
 
+  const onMarkerAdd = useCallback((coordinates) => {
+    setMarkers([...markers, coordinates])
+  }, [markers])
+
+  const clear = useCallback(() => {
+    setMarkers([])
+  }, [])
 
   return (
     <>
       <ThemesContext.Provider value={currentTheme}>
         <div className="app">
-
           <Header toggleTheme={toggleTheme} />
 
           <Routes>
             <Route path='/' element={<MainPage />} />
-            <Route path='/service' element={<ServicePage />} />
+            <Route path='/service' element={<ServicePage3 />} />
             <Route path='/about' element={<AboutPage />} />
-            <Route path='/contact' element={<ContactPage />} />
+            <Route
+              path='/contact'
+              element={
+                <ContactPage
+                  // isLoaded={isLoaded}
+
+
+
+                  // onSelect={onPlaceSelect}
+                  // toggleMode={toggleMode}
+                  // clear={clear}
+
+                  center={center}
+                  centerUser={centerUser}
+                  mode={mode}
+                  markers={markers}
+                  onMarkerAdd={onMarkerAdd}
+                />
+              }
+            />
+            <Route path='/speed-info' element={<SideSpeedtPage />} />
+            <Route path='/seo-info' element={<SeoPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
 
