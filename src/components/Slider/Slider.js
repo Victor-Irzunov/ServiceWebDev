@@ -20,16 +20,16 @@ const Slider = () => {
 			showThumbs={false}
 		>
 			<div>
-				<img src={sliderImg1} alt='Картинка 1 слайдера' title='Картинка 1 слайдера' />
-				<p className="legend">Legend 1</p>
+				<img src={sliderImg1} alt='Разработка сайтов Картинка 1 слайдера' title='Картинка 1 слайдера' />
+				{/* <p className="legend">Legend 1</p> */}
 			</div>
 			<div>
-				<img src={sliderImg2}  alt='Картинка 2 слайдера'  title='Картинка 2 слайдера'/>
-				<p className="legend">Legend 2</p>
+				<img src={sliderImg2}  alt='Разработка сайтов Картинка 2 слайдера'  title='Картинка 2 слайдера'/>
+				{/* <p className="legend">Legend 2</p> */}
 			</div>
 			<div>
-				<img src={sliderImg3}  alt='Картинка 3 слайдера' title='Картинка 3 слайдера' />
-				<p className="legend">Legend 3</p>
+				<img src={sliderImg3}  alt='Разработка сайтов Картинка 3 слайдера' title='Картинка 3 слайдера' />
+				{/* <p className="legend">Legend 3</p> */}
 			</div>
 		</Carousel>
 	)

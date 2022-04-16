@@ -1,0 +1,32 @@
+import React, { useContext, useState } from "react";
+import { ThemesContext } from "../../themes/themes";
+import './Modal.css'
+import FormPhone from '../formPhone/FormPhone'
+
+
+const Modal = ({ dataModal, setIsModal }, props) => {
+	const { toggleTheme } = props
+	const { theme } = useContext(ThemesContext)
+
+
+
+
+	return (
+		<section className="modal" >
+			<div className="modal-close">
+				<button
+					className="noselect"
+					onClick={() => setIsModal(false)}
+				><span class="text">Закрыть</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+			</div>
+			<div className="modal-box">
+				<h4>Подтвердите свой заказ </h4>
+				<FormPhone dataModal={dataModal} setIsModal={setIsModal} />
+			</div>
+		</section>
+	)
+
+
+}
+
+export default Modal

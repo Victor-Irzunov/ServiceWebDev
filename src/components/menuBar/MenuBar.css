@@ -1,0 +1,174 @@
+.toggle {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 50px;
+	display: none;
+
+	padding: 5px 20px;
+	font-size: 20px;
+	justify-content: flex-end;
+	align-items: center;
+	color: #fff;
+	cursor: pointer;
+	z-index: 131;
+
+}
+
+.toggle:before {
+	content: 'Меню';
+	font-family: 'Jura', sans-serif;
+	margin-right: 10px;
+}
+
+.toggle.active:before {
+	content: 'Закрыть';
+	font-family: 'Jura', sans-serif;
+	margin-right: 10px;
+}
+
+.toggle-span {
+	position: relative;
+	min-width: 20px;
+	height: 50px;
+}
+
+.toggle-span:before {
+	content: '';
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+}
+
+.toggle-span:after {
+	content: '';
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transition: 0.5s;
+}
+.toggle-span.active:before {
+	content: '';
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	transition: 0.5s;
+}
+
+.toggle-span.active:after {
+	content: '';
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	transition: 0.5s;
+}
+
+.toggle.active .toggle-span:before {
+	transform: rotate(225deg);
+	top: 24px;
+}
+
+.toggle.active .toggle-span:after {
+	transform: rotate(135deg);
+	bottom: 24px;
+}
+
+
+
+
+.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	z-index: 130;
+	
+}
+
+.navigation.active {
+	visibility: visible;
+}
+
+.navigation span {
+	position: absolute;
+	top: -100%;
+	left: calc(25% * var(--i));
+	width: 25%;
+	height: 100%;
+	/* background: #de0611; */
+	/* background: #0c61ff; */
+	background-image: linear-gradient(to top, rgba(12, 242, 255, 1) 0%, #495aff 100%);
+
+	transition: 0.25s;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transition-delay: calc(0.25s * var(--i));
+}
+
+.navigation.active span {
+	top: 0;
+}
+
+.navigation ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: 2;
+	transform: translateX(-100px);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+	transition-delay: 0s
+}
+
+.navigation.active ul {
+	transform: translateX(0px);
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.75s
+}
+
+.navigation ul li {
+	list-style: none;
+	font-family: 'Jura', sans-serif;
+	margin-bottom: 1em;
+}
+
+.navigation ul li a {
+	text-decoration: none;
+	font-size: 3em;
+	/* font-weight: 700; */
+	color: #fff;
+	display: inline-block;
+	padding: 5px 20px;
+}
+
+.navigation ul li:hover a {
+	background: #fff;
+	color: #de0611;
+}
+
+@media screen and (max-width: 1080px) {
+	.toggle {
+		display: flex;
+	}
+}

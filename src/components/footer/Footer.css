@@ -1,86 +1,106 @@
-.footer{
-	/* height: 50vh; */
+.footer {
 	margin-top: auto;
 	padding: 20px 20px 20px 20px;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Jura', sans-serif;
 }
 
-.container{
+.container {
 	width: 90%;
 	margin: 0 auto;
 }
-.footer__block{
+
+.footer__block {
 	display: flex;
 	border-bottom: 1px solid #1a1a1a;
-	padding-bottom: 3em;
+	padding-bottom: 2em;
 }
-.left__box, .right__box2{
+
+.left__box,
+.right__box2 {
 	width: 50%;
 }
-.left__box{
+
+.left__box {
 	margin-right: 3em;
 }
-.left__box h3, .right__box2 h3{
+
+.left__box h3,
+.right__box2 h3 {
 	font-size: 2em;
 }
-.footer__contact, .footer__sendmail{
+
+.footer__contact,
+.footer__sendmail {
 	position: relative;
 }
-.footer__contact p, .footer__contact p a{
+
+.footer__contact p,
+.footer__contact p a {
 	font-size: 1.5em;
 	margin-bottom: 1em;
 	color: #7a8392;
 	cursor: pointer;
 }
-.footer__contact p a{
+
+.footer__contact p a {
 	font-size: 1em;
 	margin-bottom: 1em;
 	color: #7a8392;
 }
-/* .footer__contact p a:visited{
-	color: rgb(110, 22, 106);
-} */
-.footer__contact p a:active{
+
+.right-title {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.footer__contact p a:active {
 	color: rgb(230, 10, 83);
 }
-.footer__contact.active:hover p:nth-child(1) a{ 
+
+.footer__contact.active:hover p:nth-child(1) a {
 	color: #fff;
 }
-.footer__contact.active:hover p:nth-child(2) a{ 
+
+.footer__contact.active:hover p:nth-child(2) a {
 	color: #fff;
 }
-.footer__contact.active:hover p:nth-child(3) a{ 
+
+.footer__contact.active:hover p:nth-child(3) a {
 	color: #0cf2ff;
 }
-.footer__contact:hover p:nth-child(1) a{ 
+
+.footer__contact:hover p:nth-child(1) a {
 	color: #000;
 }
-.footer__contact:hover p:nth-child(2) a{ 
+
+.footer__contact:hover p:nth-child(2) a {
 	color: #000;
 }
-.footer__contact:hover p:nth-child(3) a{ 
-	color: transparent !important;    
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(#0cf2ff, #0cf2ff);
-	-webkit-text-stroke: 1px rgba(0,0,0,0.5);
-	-webkit-text-fill-color: rgba(0,0,0,0.1);
+
+.footer__contact:hover p:nth-child(3) a {
+	color: #5b81e9;
 }
-.footer__contact .fa.fa-mobile{
+
+.footer__contact .fa.fa-mobile {
 	font-size: 2em;
 	margin-right: 0.5em;
 	vertical-align: middle;
 
 }
-.footer__contact .fa.fa-map-marker{
+
+.footer__contact .fa.fa-map-marker {
 	font-size: 1.5em;
 	margin-right: 0.7em;
 }
-.footer__contact .fa-envelope-o{
+
+.footer__contact .fa-envelope-o {
 	font-size: 1em;
 	margin-right: 0.9em;
 }
-.footer__contact::before, .footer__sendmail::before{
+
+.footer__contact::before,
+.footer__sendmail::before {
 	position: absolute;
 	content: '';
 	top: 15px;
@@ -88,7 +108,9 @@
 	width: 100%;
 	background: #1a1a1ac9;
 }
-.footer__contact::after, .footer__sendmail::after{
+
+.footer__contact::after,
+.footer__sendmail::after {
 	position: absolute;
 	content: '';
 	height: 2px;
@@ -96,50 +118,232 @@
 	background: #0cf2ff;
 	top: 15px;
 }
-.footer__sendmail, .footer__contact{
+
+.footer__sendmail.active::after {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 20%;
+	background: #0cf2ff;
+	top: 15px;
+	right: 0;
+}
+
+.footer__sendmail,
+.footer__contact {
 	padding-top: 4em;
 }
-.contact__form{
-	display: flex;
-	flex-direction: column;
-}
-.form__box{
-	margin-bottom: 3em;
-	
-}
-.name__zone, .email__zone, .message__zone{
-	background: transparent;
-	border-bottom: 2px solid #1a1a1a;
-	font-size: 1.5em;
-}
-.name__zone{
-	width: 47%;
-	margin-right: 1em;
-}
-.email__zone{
-	width: 47%;
-}
-.btn__form{
-	background-image: linear-gradient(to top, #5b81e9, #1ce3da);
-	padding: 5px 0px 5px 0px;
-	margin-top: 2em;
-	font-size: 1.5em;
-	color: #1a1a1a;
-	cursor: pointer;
 
-}
-.btn__form:hover{
-	color: #fff;
-}
-.footer section .copirait{
+.footer section .copirait {
 	padding: 10px 0px 0px 0px;
 	color: #6b7482;
 }
-.footer .copirait span{
-	/* color: #0cf2ff; */
-	/* color: transparent !important;     */
+
+.footer .copirait span {
 	-webkit-background-clip: text;
 	background-clip: text;
 	background-image: linear-gradient(#0cf2ff, #0cf2ff);
 }
 
+
+
+
+@media screen and (max-width: 1080px) {
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 896px) {
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1.2em;
+	}
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (max-width: 834px) {
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.3em;
+	}
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1.1em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1em;
+	}
+
+	.btn__form {
+		font-size: 1em;
+	}
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.2em;
+	}
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+		font-size: 1.1em;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.footer__block {
+		flex-direction: column-reverse;
+	}
+
+	.left__box,
+	.right__box2 {
+		width: 100%;
+	}
+
+	.right__box2 {
+		margin-bottom: 3em;
+	}
+}
+
+@media screen and (max-width: 575px) {
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.5em;
+	}
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+		font-size: 1.3em;
+	}
+
+	.btn__form {
+		font-size: 1.3em;
+	}
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 540px) {
+
+	.main__aside h3 {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		padding-bottom: 0.3em;
+	}
+}
+
+@media screen and (max-width: 428px) {
+
+	.footer section .copirait {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 414px) {
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1.1em;
+	}
+
+	.footer section .copirait {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 390px) {
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.3em;
+	}
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1.1em;
+	}
+
+	.icons a {
+		margin: 0 20px 0 0;
+	}
+
+	.footer section .copirait {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+		font-size: 1.1em;
+	}
+
+	.btn__form {
+		font-size: 1.2em;
+	}
+
+
+	.footer section .copirait {
+		font-size: 0.7em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+	.left__box h3,
+	.right__box2 h3 {
+		font-size: 1.1em;
+	}
+
+	.name__zone,
+	.email__zone,
+	.message__zone {
+		font-size: 1em;
+	}
+
+	.footer__contact p,
+	.footer__contact p a {
+		font-size: 1em;
+	}
+
+	.step h2 {
+		font-size: 2em;
+	}
+
+	.footer section .copirait {
+		font-size: 0.6em;
+	}
+}

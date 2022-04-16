@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 const SiteSpeedPage = props => {
 
-	const theme = useContext(ThemesContext)
+	const { theme } = useContext(ThemesContext)
 
 
 	return (
@@ -19,16 +19,20 @@ const SiteSpeedPage = props => {
 		>
 			<div className="side-speed-container">
 				<section>
-					<article >
+					<div className="side-article">
 						<h2
 							style={{
-								webkitTextStroke: theme.webkitText,
-								webkitTextFillColor: theme.webkitTextFull
+								color: theme.textH2Main
 							}}
 						>Почему важна скорость загрузки сайта.</h2>
 						<p style={{
 							color: theme.textColor,
-						}}><img className="image-speed" src={image} /> <span className='begin-speed'>Быстрый удобный сайт</span> — щедрый источник продаж. Скорость загрузки страниц — конкурентное оружие и основа успеха в интернете. Важно стремиться улучшать этот параметр и обязательно контролировать его доступными средствами.
+						}}><img
+								className="image-speed"
+								src={image}
+								alt='Сделать сайт скорость загрузки сайта'
+								title="Картинка скорость загрузки сайта"
+							/> <span className='begin-speed'>Быстрый удобный сайт</span> — щедрый источник продаж. Скорость загрузки страниц — конкурентное оружие и основа успеха в интернете. Важно стремиться улучшать этот параметр и обязательно контролировать его доступными средствами.
 							<p className="title-speed">Гонка за покупателем</p>
 							Компании и предприниматели в интернете борются за сердца пользователей — своих потенциальных клиентов. Сайты становятся все более красивыми, информативными, функциональными. В ход идут орудия SEO, SMM и контекстной рекламы. Задействуются любые средства интернет-маркетинга — лишь бы оказаться на передовой поисковой выдачи.
 							<p className="title-speed">Почему так важна скорость?</p>
@@ -52,7 +56,7 @@ const SiteSpeedPage = props => {
 							В общем и целом, быстрым следует считать такой сайт, который не раздражает пользователя. Страницы ресурса должны загружаться достаточно оперативно — как минимум, не хуже, чем у основных конкурентов и в среднем по интернету.
 						</p>
 						<Link to="/seo-info" className="seo-link">Что необходимо для органического (SEO) продвижения сайта?</Link>
-					</article>
+					</div>
 				</section>
 			</div>
 		</main>

@@ -2,23 +2,28 @@
 {
 	position: fixed;
 	bottom: 800px;
-	right: 15px;
+	left: 5px;
 	cursor: pointer;
 	z-index: 100000;
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.5s;
+	font-family: 'Jura', sans-serif;
 
 	transform: rotate(-90deg);
 }
 .top-text{
 	font-size: 1em;
-	color: #fff;
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right,#af1be3, #f81b9f);
 }
 .fa.fa-arrow-up{
 	transform: rotate(90deg);
 	vertical-align: middle;
 	margin-left: 1em;
+	color: #f81b9f;
 }
 .scroll-top.active
 {
@@ -26,9 +31,9 @@
 	visibility: visible;
 	opacity: 1;
 }
-.scroll-top:hover{
-	color: #ff3b7e !important;
+.scroll-top:hover .fa-arrow-up{
+	color: #fb4b02 !important;
 }
 .top-text:hover{
-	color: #ff3b7e !important;
+	color: #fb4b02 !important;
 }

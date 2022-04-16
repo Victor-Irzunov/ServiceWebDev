@@ -1,5 +1,5 @@
-import React, { useState, useContext, useCallback, useEffect } from "react"
-import { Routes, Route, Link } from "react-router-dom"
+import React, { useState, useCallback, useEffect } from "react"
+import { Routes, Route  } from "react-router-dom"
 import { useJsApiLoader } from '@react-google-maps/api'
 import { getBrowserLocation } from './utils/geo'
 import {
@@ -7,6 +7,8 @@ import {
   MODES
 } from './components/Map-location/Map'
 import { ThemesContext, themes } from './themes/themes'
+import { dollarExchangeRate } from './Api-bank/api'
+
 import './App.css'
 import Header from "./components/header/Header"
 import MainPage from "./pages/MainPage/MainPage"
@@ -28,21 +30,30 @@ const defaultCenter = {
 
 
 function App() {
-  const theme = useContext(ThemesContext)
-  const [currentTheme, setCurrentTheme] = useState(themes.dark)
+  // const theme = useContext(ThemesContext)
+  const [theme, setTheme] = useState(themes.dark)
   const [center, setCenter] = useState(defaultCenter)
   const [centerUser, setCenterUser] = useState(defaultCenter)
   const [mode, setMode] = useState(MODES.MOVE)
   const [markers, setMarkers] = useState([])
+	const [dollar, serDollar] = useState(null)
+
 
   const API_KEY = process.env.REACT_APP_API_KEY
   const libraries = ['places']
 
-  // const { isLoaded } = useJsApiLoader({
-  //   id: 'google-map-script',
-  //   googleMapsApiKey: API_KEY,
-  //   libraries
-  // })
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: API_KEY,
+    libraries
+  })
+
+  useEffect(() => {
+		dollarExchangeRate().then(data => {
+			serDollar(data.data.Cur_OfficialRate)
+		})
+	}, [])
+
 
   useEffect(() => {
     getBrowserLocation()
@@ -55,7 +66,7 @@ function App() {
   }, [])
 
   const toggleTheme = () => {
-    setCurrentTheme(prevTheme => prevTheme === themes.dark
+    setTheme(prevTheme => prevTheme === themes.dark
       ? themes.ligth : themes.dark)
   }
 
@@ -88,7 +99,7 @@ function App() {
 
   return (
     <>
-      <ThemesContext.Provider value={currentTheme}>
+      <ThemesContext.Provider value={{ theme, dollar }}>
         <div className="app">
           <Header toggleTheme={toggleTheme} />
 
@@ -100,13 +111,11 @@ function App() {
               path='/contact'
               element={
                 <ContactPage
-                  // isLoaded={isLoaded}
+                  isLoaded={isLoaded}
 
-
-
-                  // onSelect={onPlaceSelect}
-                  // toggleMode={toggleMode}
-                  // clear={clear}
+                  onSelect={onPlaceSelect}
+                  toggleMode={toggleMode}
+                  clear={clear}
 
                   center={center}
                   centerUser={centerUser}

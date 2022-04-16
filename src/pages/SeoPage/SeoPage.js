@@ -5,14 +5,13 @@ import { ThemesContext } from "../../themes/themes";
 import './SeoPage.css'
 
 const SeoPage = props => {
-	const theme = useContext(ThemesContext)
+	const { theme } = useContext(ThemesContext)
 
 	let active = theme.isActive ? 'seo-fon active' : 'seo-fon'
 
 	return (
 		<main className="seo"
 			style={{
-				// background: theme.background,
 				color: theme.textColor
 			}}>
 
@@ -21,10 +20,9 @@ const SeoPage = props => {
 			<div className={active}></div>
 			<div className={theme.isActive ? "seo-container active" : "seo-container"}>
 				<section>
-					<article>
+					<div className="article">
 						<h2 style={{
-							webkitTextStroke: theme.webkitText,
-							webkitTextFillColor: theme.webkitTextFull
+							color: theme.textH2Main
 						}}>
 							Что необходимо для органического (SEO) продвижения сайта?
 						</h2>
@@ -232,7 +230,7 @@ const SeoPage = props => {
 							</p>
 						</p>
 
-					</article>
+					</div>
 					<Link to="/speed-info" className="link-speed">Почему важна скорость загрузки сайта.</Link>
 				</section>
 			</div>

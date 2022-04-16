@@ -5,7 +5,7 @@ import './ToTop.css'
 
 
 const ToTop = props => {
-	const theme = useContext(ThemesContext)
+	const { theme } = useContext(ThemesContext)
 	const [scrollTop, setScrollTop] = useState(false)
 
 	useEffect(() => {
@@ -28,16 +28,20 @@ const ToTop = props => {
 
 	return (
 		<div className={toTop} onClick={scrollToTop}>
-		<span
-			className="top-text"
-			style={{ color: theme.textColor }}
-		>
-			Наверх
-		</span>
-		<span className="top-icon">
-			<i className="fa fa-arrow-up" aria-hidden="true" />
-		</span>
-	</div>
+			<span
+				className="top-text"
+				// style={{ color: theme.textColor }}
+			>
+				Наверх
+			</span>
+			<span className="top-icon">
+				<i
+					className="fa fa-arrow-up"
+					aria-hidden="true"
+					// style={{ color: theme.textColor }}
+				/>
+			</span>
+		</div>
 	)
 
 

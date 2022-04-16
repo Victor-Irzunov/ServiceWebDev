@@ -1,11 +1,12 @@
-.seo{
+.seo {
 	padding-top: 10em;
 	width: 100%;
 	height: auto;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Jura', sans-serif;
 	padding-bottom: 3em;
 }
-.seo-fon{
+
+.seo-fon {
 	width: 100%;
 	height: 100vh;
 	background: url(./image/seo.jpeg) no-repeat center;
@@ -15,7 +16,8 @@
 	left: 0;
 	z-index: -1;
 }
-.seo-fon.active::after{
+
+.seo-fon.active::after {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -23,10 +25,11 @@
 	top: 0;
 	left: 0;
 	background: #000;
-	opacity: 0.7;
+	opacity: 0.9;
 	z-index: 1;
 }
-.seo-fon::after{
+
+.seo-fon::after {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -34,64 +37,109 @@
 	top: 0;
 	left: 0;
 	background: #fff;
-	opacity: 0.7;
+	opacity: 0.95;
 	z-index: 1;
 }
-.seo-container{
+
+.seo-container {
 	width: 90%;
-	text-align:justify;
+	text-align: justify;
 	margin: 0 auto;
-	/* z-index: 2;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);*/
-} 
-.seo-container article{
+}
+
+.seo-container .article {
 	margin-bottom: 2em
 }
-.seo-container h2{
+
+.seo-container h2 {
 	text-align: center;
 	font-size: 3em;
 	padding: 5px 5px 5px 5px;
 	margin-bottom: 1.5em;
-	color: transparent;    
+	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	/* background-image: linear-gradient(to top, #5b81e9, #1ce3da); */
 	background-image: linear-gradient(to top, #0cf2ff, #0cf2ff);
 }
-.seo-container p{
+
+.seo-container p {
 	font-size: 1.7rem;
 	line-height: 1.3;
 	text-indent: 1.5em;
 	text-align: justify;
 }
-.seo-container h3{
+
+.seo-container h3 {
 	font-size: 1.3em;
 	margin-left: 0.5em;
 }
-.seo-container h4{
+
+.seo-container h4 {
 	font-size: 1.1em;
 	margin-left: 1.5em;
 }
-.seo-container ul li{
+
+.seo-container ul li {
 	list-style-type: none;
 	margin-left: 2.5em;
 }
+
 .seo-container ul li::before {
 	content: '▪';
-	color:#000;
+	color: #000;
 	margin-right: 10px;
 }
+
 .seo-container.active ul li::before {
 	content: '▪';
-	color:#0cf2ff;
+	color: #0cf2ff;
 	margin-right: 10px;
 }
-.link-speed{
+
+.link-speed {
 	font-size: 1.2em;
 	text-decoration: underline;
-	color: rgba(12, 242, 255,1);
+	color: rgb(12, 97, 255);
 	float: left;
 }
 
+@media screen and (max-width: 575px) {
+	.seo-container h2 {
+		font-size: 2em;
+	}
+
+	.seo-container p {
+		font-size: 1.3rem;
+	}
+
+}
+
+@media screen and (max-width: 540px) {
+	.seo-container h2 {
+		font-size: 1.6em;
+	}
+
+}
+
+@media screen and (max-width: 428px) {
+	.seo-container h2 {
+		font-size: 1.3em;
+	}
+
+	.seo-container p {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.seo-container h2 {
+		font-size: 1em;
+	}
+
+	.seo-container p {
+		font-size: 0.8rem;
+	}
+	.link-speed{
+		font-size: 1em;
+	}
+}

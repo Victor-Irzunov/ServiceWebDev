@@ -11,7 +11,8 @@ import { LocationMarkerUser } from "../LocationMarkerUser"
 
 const containerStyle = {
 	width: '100%',
-	height: '400px'
+	height: '400px',
+	position: 'absolute'
 }
 
 const defaultOption = {

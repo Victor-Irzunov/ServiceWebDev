@@ -1,11 +1,13 @@
-.about{
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
+
+.about {
 	width: 100%;
-	height: 100vh;
 	position: relative;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Jura', sans-serif;
+	padding-bottom: 5em;
 }
 
-.about-fon.active::before{
+.about-fon.active::before {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -16,7 +18,8 @@
 	opacity: 0.7;
 	z-index: 1;
 }
-.about-fon::before{
+
+.about-fon::before {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -28,7 +31,7 @@
 	z-index: 1;
 }
 
-.about video{
+.about video {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -39,42 +42,211 @@
 	object-fit: cover;
 	z-index: -1;
 }
-.container-about{
+
+.container-about {
 	width: 90%;
 	margin: 0 auto;
 	min-height: 100vh;
 }
-.about section article{
+
+.about-block {
+	width: 100%;
+	z-index: 100;
+}
+
+.about section article {
 	display: flex;
+	flex-wrap: wrap;
 	padding-top: 9em;
 }
-.about-box{
-	flex: 1;
-	z-index: 100;
-	height: 100vh;
+
+.box-title {
+	width: 100%;
 }
-.box-title h2{
+
+.box-title h2 {
 	font-size: 5em;
-	color: transparent;    
+	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	/* background-image: linear-gradient(to top, #5b81e9, #0cf2ff); */
 	background-image: linear-gradient(to top, #0cf2ff, #0cf2ff);
+
 }
-.box-title p{
-	/* color: #fff; */
-	font-size: 2em;
-	margin-top: 2em;
+
+.box-title h3 {
+	font-size: 3em;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	vertical-align:bottom;
 }
-.box-title p span{
-	font-family: 'Ubuntu', sans-serif;
-	color: #0cf2ff;
+
+.box-title p {
+	font-size: 1.5em;
+	margin-left: 2em;
 }
-.box-content{
+
+.about-content {
+	width: 100%;
+}
+
+.about-content p {
+	line-height: 1.2;
+}
+
+.about-logo {
+	width: 150px;
+	height: auto;
+	vertical-align:bottom;
+}
+
+
+.box-face {
+	width: 100%;
+	z-index: 100;
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	margin-left: 2em;
+	margin-top: 6em;
 }
-.box-content p{
-	font-size: 2em;
-	/* color: #fff; */
+
+.box-face-foto {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.face {
+	min-width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	backdrop-filter: blur(15px);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+	margin-top: 5em;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.face-foto {
+	width: 10em;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.box-face-content {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: -28px;
+	left: 210px;
+}
+
+
+.b-tooltip {
+	background: transparent;
+	position: relative;
+	display: inline-block;
+	padding: 10px 15px;
+	border: 3px solid rgba(175, 27, 227, 1);
+	border-radius: 10px;
+	font-family: 'Caveat', cursive;
+	font-size: 1.6em;
+}
+
+.b-tooltip p {
+	margin-bottom: 0.5em;
+}
+
+.b-tooltip:before,
+.b-tooltip:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.b-tooltip:before {
+	left: 10px;
+	border-width: 30px 30px 0 0;
+	border-color: rgba(175, 27, 227, 1) transparent transparent transparent;
+}
+
+.b-tooltip:after {
+	left: 15px;
+	border-width: 18px 18px 0 0;
+	border-color: transparent transparent transparent transparent;
+}
+
+@media screen and (max-width: 834px) {
+
+	.box-face-content {
+		top: -70px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+
+	.box-title h2 {
+		font-size: 4em;
+	}
+
+	.box-title h3 {
+		font-size: 2em;
+	}
+
+	.box-title p {
+		font-size: 1.2em;
+	}
+
+	.b-tooltip {
+		font-size: 1.3em;
+	}
+
+	.box-face-content {
+		left: 160px;
+	}
+
+	.face {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 428px) {
+
+	.face {
+		margin-top: 14em;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	.face-foto {
+		width: 6em;
+	}
+
+	.face {
+		min-width: 100px;
+		height: 100px;
+	}
+
+	.box-face-content {
+		left: 80px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+	.box-face-content {
+		top: -70px;
+		left: 40px;
+	}
 }

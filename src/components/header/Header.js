@@ -1,15 +1,15 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ThemesContext } from "../../themes/themes";
+import MenuBar from "../menuBar/MenuBar";
 import './Header.css'
-import lampOff from './image/bulb-off.png'
-import lampOn from './image/bulb-on.png'
-// import logo from './image/14.png'
-import logo from './image/logo-16.png'
+import lampOff from './image/lamp-off.png'
+import lampOn from './image/lamp-on.png'
+import logo from './image/logo.png'
 
 const Header = props => {
 	const { toggleTheme } = props
-	const theme = useContext(ThemesContext)
+	const { theme } = useContext(ThemesContext)
 	const [logoTechColor, setLogoTechColor] = useState(false)
 
 	const [scroll, setScroll] = useState(0)
@@ -42,8 +42,14 @@ const Header = props => {
 			}}
 		>
 			<div className="container__header">
+
 				<div className={tech}>
-					<Link to="/"><img src={logo} className='logo__img' alt="logo" title="Логотип компании"/></Link>
+					<Link to="/">
+						<img src={logo} className='logo__img'
+							alt="Сделать сайт Логотип компании На главную"
+							title="Логотип компании"
+						/>
+					</Link>
 				</div>
 
 				<nav className="nav">
@@ -80,24 +86,43 @@ const Header = props => {
 					</ul>
 				</nav>
 
+
 				<a
 					href="tel:+375291880022"
 					className="header__phone"
 					title="Наш рабочий телефон"
-					style={{
-						webkitTextStroke: theme.webkitText,
-						webkitTextFillColor: theme.webkitTextFull
-					}}
+					style={{ color: theme.textColor }}
 				>
 					+375 29 188-00-22
 				</a>
+				<a
+					href="tel:+375291880022"
+					className="header__phone-icon"
+					title="Наш рабочий телефон"
+					style={{ color: theme.textColor }}
+				>
+					<i
+						class="fa fa-phone"
+						style={{ color: theme.textColor }}
+						aria-hidden="true" />
+				</a>
+
+
+
 
 				<button type="button" className="header__btn" onClick={() => {
 					toggleTheme()
 					setLogoTechColor(i => !i)
 				}}>
-					<img src={!logoTechColor ? lampOn : lampOff} className='header__theme' alt='lamp' title="Переключение темы" />
+					<img
+						src={!logoTechColor ? lampOn : lampOff}
+						className='header__theme'
+						alt='Сделать сайт лампа'
+						title="Переключение темы"
+					/>
 				</button>
+
+				<MenuBar />
 			</div>
 		</header>
 	)

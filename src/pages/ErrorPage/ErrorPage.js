@@ -4,7 +4,7 @@ import { ThemesContext } from "../../themes/themes";
 import './ErrorPage.css'
 
 const ErrorPage = props => {
-	const theme = useContext(ThemesContext)
+	const { theme } = useContext(ThemesContext)
 
 
 
