@@ -9,7 +9,7 @@ import mail from '../../emailkey'
 const FormPhone = ({ dataModal, setIsModal }) => {
 	const { theme } = useContext(ThemesContext)
 	const [name, setName] = useState('')
-	const [message, setMessage] = useState(dataModal ? `Мой заказ ${dataModal}` : '')
+	const [message, setMessage] = useState(dataModal ? `${dataModal}` : '')
 	const [tel, setTel] = useState('')
 
 	const form = useRef()

@@ -1,14 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ThemesContext } from "../../themes/themes";
 import './Step.css'
 
 
-const Step = props => {
-	const { toggleTheme } = props
+const Step = () => {
 	const { theme } = useContext(ThemesContext)
-
-
-
 
 	return (
 		<section>

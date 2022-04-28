@@ -114,8 +114,6 @@
 	left: calc(25% * var(--i));
 	width: 25%;
 	height: 100%;
-	/* background: #de0611; */
-	/* background: #0c61ff; */
 	background-image: linear-gradient(to top, rgba(12, 242, 255, 1) 0%, #495aff 100%);
 
 	transition: 0.25s;

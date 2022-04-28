@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { ThemesContext } from "../../themes/themes";
 import MenuBar from "../menuBar/MenuBar";
 import './Header.css'
-import lampOff from './image/lamp-off.png'
-import lampOn from './image/lamp-on.png'
-import logo from './image/logo.png'
+import lampOff from './image/lamp-off.webp'
+import lampOn from './image/lamp-on.webp'
+
+
 
 const Header = props => {
 	const { toggleTheme } = props
@@ -45,10 +46,12 @@ const Header = props => {
 
 				<div className={tech}>
 					<Link to="/">
-						<img src={logo} className='logo__img'
-							alt="Сделать сайт Логотип компании На главную"
-							title="Логотип компании"
-						/>
+
+						<div className="logo">
+							<span>vi:tech</span>
+							<span>digital agency</span>
+						</div>
+
 					</Link>
 				</div>
 
@@ -61,6 +64,7 @@ const Header = props => {
 								Главная
 							</Link>
 						</li>
+
 						<li>
 							<Link style={{ color: theme.textColor, boxShadow: theme.boxShadowNav }}
 								onMouseMove={e => indicator(e.target)}
@@ -102,7 +106,7 @@ const Header = props => {
 					style={{ color: theme.textColor }}
 				>
 					<i
-						class="fa fa-phone"
+						className="fa fa-phone"
 						style={{ color: theme.textColor }}
 						aria-hidden="true" />
 				</a>

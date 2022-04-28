@@ -1,11 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ThemesContext } from "../../themes/themes";
+import React, {useEffect, useState } from "react";
 import './ToTop.css'
 
 
-const ToTop = props => {
-	const { theme } = useContext(ThemesContext)
+const ToTop = () => {
 	const [scrollTop, setScrollTop] = useState(false)
 
 	useEffect(() => {
@@ -30,7 +27,6 @@ const ToTop = props => {
 		<div className={toTop} onClick={scrollToTop}>
 			<span
 				className="top-text"
-				// style={{ color: theme.textColor }}
 			>
 				Наверх
 			</span>
@@ -38,7 +34,6 @@ const ToTop = props => {
 				<i
 					className="fa fa-arrow-up"
 					aria-hidden="true"
-					// style={{ color: theme.textColor }}
 				/>
 			</span>
 		</div>

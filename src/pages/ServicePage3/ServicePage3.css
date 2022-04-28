@@ -133,58 +133,7 @@
 	color: #fff;
 	line-height: 1.3;
 	text-align: left;
-}
-
-.b-marquee {
-	font-family: 'Jura', sans-serif;
-	white-space: nowrap;
-	overflow: hidden;
-	color: #fff;
-	padding: 10px;
-	position: relative;
-	margin-bottom: 10px;
-	margin-top: 2em;
-	font-size: 2em;
-}
-
-.b-marquee--rtl .b-marquee__text {
-	-webkit-animation: animMarqueeRtl 15s linear infinite;
-	animation: animMarqueeRtl 15s linear infinite;
-}
-
-.b-marquee__text span {
-	color: #0cf2ff;
-	margin-right: 5px;
-	padding: 5px;
-	background: #af1be3;
-	background: -webkit-linear-gradient(to top, #af1be3, #f81b9f);
-	background: linear-gradient(to top, #af1be3, #f81b9f);
-	border-radius: 5px;
-}
-
-
-@-webkit-keyframes animMarqueeRtl {
-	0% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-
-	100% {
-		-webkit-transform: translateX(0%);
-		transform: translateX(0%);
-	}
-}
-
-@keyframes animMarqueeRtl {
-	0% {
-		-webkit-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
+	font-size: 1.2em;
 }
 
 .custom-btn {

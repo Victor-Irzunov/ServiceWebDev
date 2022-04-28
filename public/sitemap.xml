@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     xsi:schemaLocation="
+          http://www.sitemaps.org/schemas/sitemap/0.9
+          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with PRO Sitemap Service https://pro-sitemaps.com -->
+
+<url>
+     <loc>https://vi-tech.by/</loc>
+     <lastmod>2022-04-23T20:19:19+00:00</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>1.0000</priority>
+</url>
+<url>
+     <loc>https://vi-tech.by/service</loc>
+     <lastmod>2022-04-23T20:20:19+00:00</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.9000</priority>
+</url>
+<url>
+     <loc>https://vi-tech.by/about</loc>
+     <lastmod>2022-04-23T20:20:19+00:00</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.6000</priority>
+</url>
+<url>
+     <loc>https://vi-tech.by/contact</loc>
+     <lastmod>2022-04-23T20:20:19+00:00</lastmod>
+     <changefreq>daily</changefreq>
+     <priority>0.7000</priority>
+</url>
+</urlset>

@@ -39,6 +39,7 @@
 	text-align: center;
 }
 
+
 .icons a:hover .layer span:nth-child(1) {
 	opacity: 0.2;
 }
@@ -124,7 +125,7 @@
 }
 
 .icons a:hover .text {
-	bottom: -35px;
+	bottom: -25px;
 	opacity: 1;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react"
-import { Routes, Route  } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { useJsApiLoader } from '@react-google-maps/api'
-import { getBrowserLocation } from './utils/geo'
+// import { getBrowserLocation } from './utils/geo'
 import {
   // Map,
   MODES
@@ -17,9 +17,9 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import ServicePage3 from './pages/ServicePage3/ServicePage3'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 import Footer from "./components/footer/Footer"
-// import { Autocomplete } from './components/Autocomplete'
+// import { Autocomplete } from './components/Autocomplete' //delete npm use-places-autocomplete
 import SideSpeedtPage from './pages/SiteSpeedPage/SiteSpeedPage'
-import { SeoPage }from './pages/SeoPage/SeoPage'
+import { SeoPage } from './pages/SeoPage/SeoPage'
 
 
 const defaultCenter = {
@@ -33,10 +33,10 @@ function App() {
   // const theme = useContext(ThemesContext)
   const [theme, setTheme] = useState(themes.dark)
   const [center, setCenter] = useState(defaultCenter)
-  const [centerUser, setCenterUser] = useState(defaultCenter)
+  // const [centerUser, setCenterUser] = useState(defaultCenter)
   const [mode, setMode] = useState(MODES.MOVE)
   const [markers, setMarkers] = useState([])
-	const [dollar, serDollar] = useState(null)
+  const [dollar, serDollar] = useState(null)
 
 
   const API_KEY = process.env.REACT_APP_API_KEY
@@ -49,21 +49,23 @@ function App() {
   })
 
   useEffect(() => {
-		dollarExchangeRate().then(data => {
-			serDollar(data.data.Cur_OfficialRate)
-		})
-	}, [])
-
-
-  useEffect(() => {
-    getBrowserLocation()
-      .then(curLoc => {
-        setCenterUser(curLoc)
-      })
-      .catch(defaultLocation => {
-        setCenterUser(defaultLocation)
-      })
+    dollarExchangeRate().then(data => {
+      serDollar(data.data.Cur_OfficialRate)
+    })
   }, [])
+
+
+  // useEffect(() => {
+  //   getBrowserLocation()
+  //     .then(curLoc => {
+  //       setCenterUser(curLoc)
+  //     })
+  //     .catch(defaultLocation => {
+  //       setCenterUser(defaultLocation)
+  //     })
+  // }, [])
+
+
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === themes.dark
@@ -109,8 +111,7 @@ function App() {
             <Route path='/about' element={<AboutPage />} />
             <Route
               path='/contact'
-              element={
-                <ContactPage
+              element={ <ContactPage
                   isLoaded={isLoaded}
 
                   onSelect={onPlaceSelect}
@@ -118,7 +119,7 @@ function App() {
                   clear={clear}
 
                   center={center}
-                  centerUser={centerUser}
+                  // centerUser={centerUser}
                   mode={mode}
                   markers={markers}
                   onMarkerAdd={onMarkerAdd}

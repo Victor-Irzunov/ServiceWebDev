@@ -43,7 +43,6 @@ const Map = props => {
 	const useMap = useRef(undefined)
 
 
-
 	const onLoad = useCallback(function callback(map) {
 		useMap.current = map
 	}, [])

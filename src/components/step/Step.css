@@ -49,10 +49,6 @@
 
 .box .fa {
 	font-size: 2em;
-	/* color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(to top,#af1be3, #f81b9f); */
 }
 
 .box p:nth-child(3) {
@@ -72,6 +68,12 @@
 	color: rgba(12, 242, 2554, 1);
 }
 
+@media screen and (max-width: 812px) {
+	.step h2 {
+		font-size: 2.5em;
+	}
+
+}
 @media screen and (max-width: 575px) {
 	.step h2 {
 		font-size: 2.5em;
@@ -79,6 +81,14 @@
 
 	.box {
 		font-size: 1.3em;
+	}
+}
+@media screen and (max-width: 540px) {
+	.step h2 {
+		font-size: 2em;
+	}
+	.box{
+		flex-basis: 12em;
 	}
 }
 
