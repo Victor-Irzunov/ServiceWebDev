@@ -8,7 +8,6 @@ import FormPhone from "../formPhone/FormPhone"
 
 
 
-
 const Footer = () => {
 	const { theme } = useContext(ThemesContext)
 	const [onMouseOver, setMouseOver] = useState(false)

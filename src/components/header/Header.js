@@ -5,6 +5,8 @@ import MenuBar from "../menuBar/MenuBar";
 import './Header.css'
 import lampOff from './image/lamp-off.webp'
 import lampOn from './image/lamp-on.webp'
+import logo from './image/logo.svg'
+import logo_mobile from './image/logo-2.svg'
 
 
 
@@ -48,10 +50,10 @@ const Header = props => {
 					<Link to="/">
 
 						<div className="logo">
-							<span>vi:tech</span>
-							<span>digital agency</span>
-						</div>
+							<img src={logo} className='logo-png'/>
+							<img src={logo_mobile} className='logo-png mobile'/>
 
+						</div>
 					</Link>
 				</div>
 

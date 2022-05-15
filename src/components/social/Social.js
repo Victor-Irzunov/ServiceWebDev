@@ -1,10 +1,10 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext} from "react";
 import { ThemesContext } from "../../themes/themes";
+
 import './Social.css'
 
 
 const Social = () => {
-	const { theme } = useContext(ThemesContext)
 
 
 

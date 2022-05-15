@@ -196,22 +196,26 @@
 }
 
 
-.about-send{
+.about-send {
 	background: transparent;
 	font-size: 1.3em;
 }
-.about-send span{
+
+.about-send span {
 	display: none;
 }
-.about-send span .fa.fa-paper-plane-o{
+
+.about-send span .fa.fa-paper-plane-o {
 	margin-left: 0.5em;
 }
-.about-send:hover{
+
+.about-send:hover {
 	color: rgb(19, 226, 60) !important;
 }
-.about-send:hover span{
+
+.about-send:hover span {
 	display: inline;
-	
+
 }
 
 
@@ -255,6 +259,19 @@
 
 	.face {
 		margin-top: 14em;
+	}
+
+	.face {
+		margin-top: 15em;
+	}
+
+	.b-tooltip {
+		font-size: 1.1em;
+	}
+
+	.box-face-content {
+		left: 73px;
+		top: -30px;
 	}
 }
 

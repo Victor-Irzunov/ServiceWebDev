@@ -3,6 +3,5 @@ const mail = {
 	TEMPLATE_ID: `template_qmpmxbh`,
 	SERVICE_ID: `service_77z7wnq`
 }
-	
+
 export default mail
-	

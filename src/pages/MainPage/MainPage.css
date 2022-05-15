@@ -14,6 +14,35 @@
 	opacity: 1;
 }
 
+.scale-up-center {
+	-webkit-animation: scale-up-center 1.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 1.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
 .main section:not(.main__title-slider) {
 	margin-bottom: 6em;
 }
@@ -25,17 +54,12 @@
 	right: 90px;
 	display: flex;
 	justify-content: space-around;
-
 }
 
 .line-box {
 	display: flex;
 	flex-direction: column;
 	transition: 0.5s;
-}
-
-.line-box:hover {
-	transform: translateY(-10px);
 }
 
 .line-box .line-span {
@@ -92,9 +116,84 @@
 	z-index: -1;
 }
 
+/* -------------------- */
+
+
+.arrow-down-box {
+	position: absolute;
+	bottom: 2em;
+	left: 5.7em;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+.arrow-down-box.active {
+	display: block;
+}
+
+.arrow-down-box h2 {
+	/* color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right, #af1be3, #f81b9f); */
+	color: #0cf2ff;
+	font-size: 2.5em;
+	margin-bottom: 1em;
+	transition: 1s;
+}
+
+.arrow-down-box:hover h2 {
+	transform: scale(1.1);
+}
+
+.arrow-down {
+	margin: 30px;
+	padding: 0px 0px 0px 80px;
+}
+
+.arrow-down span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-bottom: 4px solid #0cf2ff;
+	border-right: 4px solid #0cf2ff;
+	transform: rotate(45deg);
+	margin: -16px;
+	animation: arrow-down 2s infinite;
+}
+
+.arrow-down span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.arrow-down span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes arrow-down {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+/* ------------------- */
+
+
+
 .main__title {
 	min-width: 50%;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 0px;
 }
 
 .clip-box {
@@ -133,8 +232,6 @@
 .custom-shape .shape-fill {
 	fill: #FFFFFF;
 }
-
-
 
 .main__title h1 {
 	font-size: 2.5em;
@@ -179,6 +276,7 @@
 	transition: all 0.2s ease;
 }
 
+
 .cta:before {
 	content: "";
 	position: absolute;
@@ -220,15 +318,15 @@
 }
 
 .main__block {
-	/* display: flex; */
 	display: none;
 }
+
+
 
 .main__section2,
 .main__section3,
 .main__section4 {
 	display: flex;
-
 }
 
 .section2__box1,
@@ -237,9 +335,8 @@
 .section5__box1 {
 	max-width: 33%;
 	border-top: 2px solid #0cf2ff;
+	overflow: hidden;
 }
-
-
 
 .section2__box1 .box1,
 .section3__box1 .box1,
@@ -248,7 +345,22 @@
 	display: flex;
 	justify-content: space-between;
 }
-
+/* .main-box-point{
+	width: 100%;
+	position: relative;
+}
+.main-point{
+	width: 8em;
+	position: absolute;
+	top: 290px;
+	left: -7px;
+}
+.main-point-2{
+	width: 4em;
+	position: absolute;
+	top: 380px;
+	left: 150px;
+} */
 .section2__box2,
 .section3__box2,
 .section4__box2 {
@@ -360,8 +472,6 @@
 	font-size: 1.8em;
 }
 
-
-
 @media screen and (max-width: 1200px) {
 
 	.section2__box1 h2,
@@ -389,10 +499,6 @@
 }
 
 @media screen and (max-width: 991px) {
-	/* .clip-box {
-		top: -16px;
-		left: -191px;
-	} */
 
 	.line-box .line-span {
 		padding: 18px 10px 18px 21px;
@@ -400,10 +506,23 @@
 }
 
 @media screen and (max-width: 896px) {
-	/* .clip-box {
-		top: 35px;
-		left: -149px;
-	} */
+	.arrow-down-box {
+		left: 3em;
+	}
+
+	.arrow-down-box h2 {
+		font-size: 1.5em;
+	}
+
+	.arrow-down span {
+		width: 20px;
+		height: 20px;
+	}
+
+	.arrow-down {
+		padding: 10px 0px 0px 0px;
+	}
+
 
 	.cta:before {
 		width: 40px;
@@ -428,6 +547,11 @@
 
 	.main-line {
 		display: none;
+	}
+
+	.arrow-down-box {
+		left: 3.5em;
+		bottom: 9em;
 	}
 }
 
@@ -469,6 +593,9 @@
 		top: 3.5em;
 	}
 
+	.arrow-down-box {
+		display: none;
+	}
 
 
 }
@@ -477,6 +604,10 @@
 	.clip-box {
 		bottom: 304px;
 		left: -650px;
+	}
+
+	.arrow-down-box.active {
+		display: none;
 	}
 
 	.main__title-slider {
@@ -631,8 +762,6 @@
 		height: 60vh;
 	}
 }
-
-@media screen and (max-width: 414px) {}
 
 @media screen and (max-width: 390px) {
 	.main__title h1 {

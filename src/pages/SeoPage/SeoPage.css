@@ -16,7 +16,10 @@
 	left: 0;
 	z-index: -1;
 }
-
+.seo-author{
+	width: 100%;
+	text-align: right;
+}
 .seo-fon.active::after {
 	content: '';
 	width: 100%;
