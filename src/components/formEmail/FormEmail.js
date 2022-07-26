@@ -24,6 +24,7 @@ const FormEmail = () => {
 				setMessage('')
 				setName('')
 			}, (error) => {
+				console.log('-----', error)
 				alert('Сообщение не отправилось: ', error.text)
 			})
 	}

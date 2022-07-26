@@ -7,8 +7,8 @@ import landingService from './image/landing-service.png'
 import siteService from './image/site-service.png'
 import storeService from './image/store2.png'
 import appService from './image/app.png'
-import support from './image/support1.png'
-import designWebsite from './image/design-website.png'
+import support from './image/support.png'
+import designWebsite from './image/test2.png'
 import cangeWebSite from './image/cangeWebSite.png'
 import { ToTop } from "../../components/toTop/ToTop"
 
@@ -39,8 +39,6 @@ const ServicePage3 = props => {
 					<article>
 						<h2
 							style={{
-								// webkitTextStroke: theme.webkitText,
-								// webkitTextFillColor: theme.webkitTextFull
 								color: theme.textColor
 							}}
 						>
@@ -65,7 +63,7 @@ const ServicePage3 = props => {
 										Пример: <br />
 										1. Логотип производит первое впечатление, которое побуждает взаимодействовать с Вашим брендом.<br />
 										2. Поможет Вам создать фирменный стиль.<br />
-										3. Логотип помогат лучше запомнить бренд.<br />
+										3. Логотип помогает лучше запомнить бренд.<br />
 										4. Выделяет среди конкурентов.<br />
 										5. Повышает лояльность к бренду.<br />
 										Путешествие Вашего бизнеса начинается с хорошего логотипа и цели однажды стать узнаваемым брендом.</p><br />
@@ -185,8 +183,8 @@ const ServicePage3 = props => {
 									/>
 								</div>
 								<div className="content">
-									<h3>Претворим Ваш<br /> дизайн в жизнь</h3>
-									<p>Если у Вас есть дизайн или Вам нравится дизайн какого-либо сайта и Вы хотите себе такой же и даже лучше, наши разработчики сделают сайт Вашей мечты.</p>
+									<h3>Тестирование</h3>
+									<p>Любой продукт, прежде чем он поподает к пользователю, должен пройти проверку у специалиста по тестированию, задачей которого является не допустить выход некачественного продукта в широкое пользование. Наш партнёр компания «Software test studio» оказывает услугу по тестированию IT продуктов. Узнать подробнее об услуге и ознакомиться с ценами Вы можете на официальном сайте компании: <a href="https://teststudio.tech" target="_blank">teststudio.tech</a></p>
 									<p>Цена: договорная</p>
 								</div>
 								<button

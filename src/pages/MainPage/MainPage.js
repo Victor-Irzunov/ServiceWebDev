@@ -14,7 +14,7 @@ import Modal from '../../components/modal/Modal'
 import discount from './images/discount.svg'
 import consultation from './images/consultation.svg'
 import support from './images/support.svg'
-import point from './images/point.svg'
+// import point from './images/point.svg'
 
 const MainPage = props => {
 	const { theme, dollar } = useContext(ThemesContext)
