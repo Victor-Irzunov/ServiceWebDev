@@ -16,17 +16,7 @@ const defaultCenter = {
 const ContactPage = (props) => {
 	const {
 		isLoaded,
-		// onSelect,
-		// toggleMode,
-		// clear,
-
-
-
-
 		center,
-		// centerUser,
-
-
 		mode,
 		markers,
 		onMarkerAdd,
@@ -35,8 +25,6 @@ const ContactPage = (props) => {
 	const [actionToggle, setActionToggle] = useState(false)
 	const [isOpenMap, setIsOpenMap] = useState(false)
 
-
-	// let active = theme.isActive ? 'contact-fon active' : 'contact-fon'
 
 	const [centerUser, setCenterUser] = useState({})
 
@@ -54,14 +42,10 @@ const ContactPage = (props) => {
 		<main
 			className="contact"
 			style={{
-				// background: theme.background,
 				color: theme.textColor
 			}}
 		>
 			<div className={theme.isActive ? 'contact-fon active' : 'contact-fon'}></div>
-
-
-
 
 			<div className={actionToggle ? "action active" : "action"}
 				onClick={() => setActionToggle(i => !i)}
@@ -141,7 +125,7 @@ const ContactPage = (props) => {
 										<span>
 											<i className="fa fa-mobile" aria-hidden="true" />
 										</span>
-										+375 29 188-00-22
+										+375 33 351-15-97
 									</a>
 								</p>
 

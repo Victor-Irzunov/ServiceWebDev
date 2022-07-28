@@ -99,7 +99,7 @@ const Header = props => {
 					title="Наш рабочий телефон"
 					style={{ color: theme.textColor }}
 				>
-					+375 29 188-00-22
+					+375 33 351-15-97
 				</a>
 				<a
 					href="tel:+375291880022"
