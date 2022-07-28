@@ -52,10 +52,10 @@ const ContactPage = (props) => {
 			>
 				<span className="contact-span">+</span>
 				<ul className="contact-ul">
-					<li><i className="fa fa-telegram" aria-hidden="true" />Facebook</li>
-					<li><i className="fa fa-instagram" aria-hidden="true" />Twitter</li>
-					<li><i className="fa fa-youtube" aria-hidden="true" />Instagram</li>
-					<li><i className="fa fa-linkedin" aria-hidden="true" />Linkded</li>
+					<li><i className="fa fa-facebook" aria-hidden="true" /><a href="https://www.facebook.com/profile.php?id=100050427249731" target="_blank">Facebook</a></li>
+					<li><i className="fa fa-telegram" aria-hidden="true" /><a href="https://web.telegram.org/z/#213696448" target="_blank">Telegram</a></li>
+					<li><i className="fa fa-instagram" aria-hidden="true" /><a href="https://www.instagram.com/webproduct_developer" target="_blank">Instagram</a></li>
+					<li><i className="fa fa-linkedin" aria-hidden="true" /><a href="https://www.linkedin.com/in/victor-irzunov-0605a2bb" target="_blank">Linkded</a></li>
 				</ul>
 			</div>
 

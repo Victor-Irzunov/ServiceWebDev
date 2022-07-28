@@ -177,7 +177,7 @@ const ServicePage3 = props => {
 								<div className="icon">
 									<img
 										src={designWebsite}
-										className='icon-img2'
+										className='icon-img9'
 										alt="Сделать сайт услуга сделать сайт по дизайну"
 										title="Картинка страниц сайта"
 									/>
