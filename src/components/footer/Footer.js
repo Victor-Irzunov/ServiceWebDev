@@ -44,7 +44,7 @@ const Footer = () => {
 										<span>
 											<i className="fa fa-mobile" aria-hidden="true" />
 										</span>
-										+375 29 188-00-22
+										+375 33 351-15-97
 									</a>
 								</p>
 

@@ -345,22 +345,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-/* .main-box-point{
-	width: 100%;
-	position: relative;
-}
-.main-point{
-	width: 8em;
-	position: absolute;
-	top: 290px;
-	left: -7px;
-}
-.main-point-2{
-	width: 4em;
-	position: absolute;
-	top: 380px;
-	left: 150px;
-} */
+
 .section2__box2,
 .section3__box2,
 .section4__box2 {
@@ -470,6 +455,10 @@
 
 .buttons .btn:nth-child(3) {
 	font-size: 1.8em;
+}
+
+.h1-content {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {

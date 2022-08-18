@@ -4,7 +4,7 @@ import './ServicePage3.css'
 import logoService from './image/logo-service2.png'
 import designService from './image/design.png'
 import landingService from './image/landing-service.png'
-import siteService from './image/site-service.png'
+import siteService from './image/site.png'
 import storeService from './image/store2.png'
 import appService from './image/app.png'
 import support from './image/support.png'
@@ -184,7 +184,7 @@ const ServicePage3 = props => {
 								</div>
 								<div className="content">
 									<h3>Тестирование</h3>
-									<p>Любой продукт, прежде чем он поподает к пользователю, должен пройти проверку у специалиста по тестированию, задачей которого является не допустить выход некачественного продукта в широкое пользование. Наш партнёр компания «Software test studio» оказывает услугу по тестированию IT продуктов. Узнать подробнее об услуге и ознакомиться с ценами Вы можете на официальном сайте компании: <a href="https://teststudio.tech" target="_blank">teststudio.tech</a></p>
+									<p>Любой продукт, прежде чем он поподает к пользователю, должен пройти проверку у специалиста по тестированию, задачей которого является не допустить выход некачественного продукта в широкое пользование. Наш партнёр компания «Software test studio» оказывает услугу по тестированию IT продуктов. Узнать подробнее об услуге и ознакомиться с ценами Вы можете на официальном сайте компании: <a href="https://teststudio.tech" target="_blank" rel="noreferrer">teststudio.tech</a></p>
 									<p>Цена: договорная</p>
 								</div>
 								<button
@@ -202,7 +202,7 @@ const ServicePage3 = props => {
 									/>
 								</div>
 								<div className="content">
-									<h3>Изменения и<br/> доработка Вашего<br/> сайта</h3>
+									<h3>Изменения и<br /> доработка Вашего<br /> сайта</h3>
 									<p>У Вас есть сайт и Вы хотите его изменить или добавить функционал, мы сделаем это, но бывает в редких случаях, что сайт написан «плохо», то такой сайт лучше, быстрее и дешевле сделать заново.</p>
 									<p>Цена: договорная</p>
 								</div>
@@ -221,7 +221,7 @@ const ServicePage3 = props => {
 									/>
 								</div>
 								<div className="content">
-									<h3>Сопровождение и поддержка Вашего<br/> сайта</h3>
+									<h3>Сопровождение и поддержка Вашего<br /> сайта</h3>
 									<p></p>
 									<p>Цена: договорная</p>
 								</div>

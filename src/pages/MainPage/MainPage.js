@@ -1,4 +1,10 @@
-import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react"
+
+import * as Scroll from 'react-scroll';
+import { Element, Events, scrollSpy } from 'react-scroll'
+
+
+
 import Typed from 'typed.js';
 import { ThemesContext } from "../../themes/themes";
 import Slider from "../../components/Slider/Slider";
@@ -15,6 +21,9 @@ import discount from './images/discount.svg'
 import consultation from './images/consultation.svg'
 import support from './images/support.svg'
 // import point from './images/point.svg'
+
+
+let LinkScroll = Scroll.Link
 
 const MainPage = props => {
 	const { theme, dollar } = useContext(ThemesContext)
@@ -34,6 +43,9 @@ const MainPage = props => {
 	const pricesDescrip = useRef()
 
 	useEffect(() => {
+
+		scrollSpy.update();
+
 		const options = {
 			strings: [
 				'Разрабатываем:'
@@ -46,6 +58,10 @@ const MainPage = props => {
 		typed.current = new Typed(el.current, options)
 		return () => {
 			typed.current.destroy()
+
+
+			Events.scrollEvent.remove('begin');
+			Events.scrollEvent.remove('end');
 		}
 	}, [])
 
@@ -84,6 +100,10 @@ const MainPage = props => {
 		}), 150)
 	}
 
+
+	// function handleSetActive(to) {
+	// 	console.log(to);
+	// }
 
 
 
@@ -149,42 +169,61 @@ const MainPage = props => {
 								/>
 
 								<span className="h1-content">
-									<a
-										href="#site"
+									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main4 }}
+
+
+										activeClass="active"
+										to="site"
+										smooth={true}
+										offset={-100}
+										duration={1000}
 									>
 										Сайты
-									</a>
+									</LinkScroll>
 								</span>
 
 								<span className="h1-content">
-									<a
-										href="#land"
+									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main5 }}
+
+										activeClass="active"
+										to="land"
+										smooth={true}
+										offset={-100}
+										duration={1000}
 									>
 										Лендинги
-									</a>
+									</LinkScroll>
 								</span>
 
 								<span className="h1-content">
-									<a
-										href="#store"
+									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main4 }}
+										activeClass="active"
+										to="store"
+										smooth={true}
+										offset={-100}
+										duration={1000}
 									>
 										Интернет магазины
-									</a>
+									</LinkScroll>
 								</span>
 								<span className="h1-content">
-									<a
-										href="#po"
+									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main5 }}
+										activeClass="active"
+										to="cor-app"
+										smooth={true}
+										offset={-100}
+										duration={1000}
 									>
 										Корпоративные приложения
-									</a>
+									</LinkScroll>
 								</span>
 							</h1>
 						</div>
@@ -232,13 +271,18 @@ const MainPage = props => {
 								<article className="main__section2 box-428">
 									<div className='flex-item section2__box1'>
 										<div className='box1'>
-											<h2><a
-												href='https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0' target='__blank'
-												name='land'
-												style={{ color: theme.textH2Main, }}
-											>
-												Лендинг
-											</a></h2>
+											<h2>
+												<Element
+													name="land">
+													<a
+														href='https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0'
+														target='__blank'
+														style={{ color: theme.textH2Main, }}
+													>
+														Лендинг
+													</a>
+												</Element>
+											</h2>
 
 											<img
 												src={screen}
@@ -303,7 +347,6 @@ const MainPage = props => {
 											className='price'
 										>
 											Цена: от {Math.floor((dollar / 2) * 100)},00p
-											{/* &#8212; {Math.floor(dollar * 100)},00p */}
 										</span>
 
 										<a href="#/" className="cta order">
@@ -317,12 +360,6 @@ const MainPage = props => {
 												Заказать
 											</span>
 										</a>
-
-										{/* <div className="main-box-point">
-											<img src={point} className='main-point' />
-											<img src={point} className='main-point-2' />
-										</div> */}
-
 									</div>
 
 									<div className="flex-item section2__box2">
@@ -362,14 +399,18 @@ const MainPage = props => {
 								<article className="main__section3 box-428">
 									<div className="flex-item section3__box1">
 										<div className="box1">
-											<h2><a
-												href='https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B9%D1%82'
-												target='__blank'
-												name='site'
-												style={{ color: theme.textH2Main }}
-											>
-												Сайт
-											</a></h2>
+											<h2>
+												<Element
+													name="site">
+													<a
+														href='https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B9%D1%82'
+														target='__blank'
+														style={{ color: theme.textH2Main }}
+													>
+														Сайт
+													</a>
+												</Element>
+											</h2>
 
 											<img
 												src={screen}
@@ -483,14 +524,18 @@ const MainPage = props => {
 								<article className="main__section4 box-428">
 									<div className="flex-item section4__box1">
 										<div className="box1">
-											<h2><a
-												href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
-												target='__blank'
-												name='store'
-												style={{ color: theme.textH2Main }}
-											>
-												<span>Интернет</span> <span>магазин</span>
-											</a></h2>
+											<h2>
+												<Element
+													name="store">
+													<a
+														href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
+														target='__blank'
+														style={{ color: theme.textH2Main }}
+													>
+														<span>Интернет</span> <span>магазин</span>
+													</a>
+												</Element>
+											</h2>
 
 											<img
 												src={screen}
@@ -602,14 +647,19 @@ const MainPage = props => {
 								<article className="main__section4 box-428">
 									<div className="flex-item section5__box1">
 										<div className="box1">
-											<h2><a
-												href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
-												target='__blank'
-												name='po'
-												style={{ color: theme.textH2Main }}
-											>
-												<span>Корпоративное</span> <span>приложение</span>
-											</a></h2>
+											<h2>
+												<Element
+													name="cor-app">
+													<a
+														href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
+														target='__blank'
+														name='po'
+														style={{ color: theme.textH2Main }}
+													>
+														<span>Корпоративное</span> <span>приложение</span>
+													</a>
+												</Element>
+											</h2>
 
 											<img
 												src={screen}
