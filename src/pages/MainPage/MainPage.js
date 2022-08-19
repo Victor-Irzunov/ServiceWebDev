@@ -1,8 +1,5 @@
 import React, { useCallback, useContext, useEffect, useRef, useState } from "react"
-
-import * as Scroll from 'react-scroll';
-import { Element, Events, scrollSpy } from 'react-scroll'
-
+import { Link as LinkScroll } from 'react-scroll'
 
 
 import Typed from 'typed.js';
@@ -20,20 +17,18 @@ import Modal from '../../components/modal/Modal'
 import discount from './images/discount.svg'
 import consultation from './images/consultation.svg'
 import support from './images/support.svg'
-// import point from './images/point.svg'
 
 
-let LinkScroll = Scroll.Link
 
-const MainPage = props => {
+const MainPage = () => {
 	const { theme, dollar } = useContext(ThemesContext)
 	const [firstBtn, setFirstBtn] = useState(true)
 	const [secondBtn, setSecondBtn] = useState(false)
 	const [thirdBtn, setThirdBtn] = useState(false)
 	const [isModal, setIsModal] = useState(false)
 	const [dataModal, setDataModal] = useState('')
-	// const [styleClip, setStyleClip] = useState()
 	const [isArrow, setIsArrow] = useState(false)
+
 	const el = useRef(null)
 	const typed = useRef(null)
 	const clipRef = useRef()
@@ -42,10 +37,8 @@ const MainPage = props => {
 	const mainBlock = useRef()
 	const pricesDescrip = useRef()
 
+
 	useEffect(() => {
-
-		scrollSpy.update();
-
 		const options = {
 			strings: [
 				'Разрабатываем:'
@@ -56,14 +49,13 @@ const MainPage = props => {
 			loop: true
 		}
 		typed.current = new Typed(el.current, options)
-		return () => {
-			typed.current.destroy()
 
-
-			Events.scrollEvent.remove('begin');
-			Events.scrollEvent.remove('end');
-		}
+		return () => typed.current.destroy()
 	}, [])
+
+	// if (window.pageYOffset < 5 && isArrow) {
+	// 	mainBlock.current.style.display = 'flex'
+	// }
 
 	const handleScrollMain = useCallback(() => {
 		const maxScrollTop = window.innerHeight
@@ -79,7 +71,7 @@ const MainPage = props => {
 		pricesDescrip.current.style.opacity = 1 - window.pageYOffset / maxScrollTop
 		pricesDescrip.current.style.transform = `translateY(-${window.pageYOffset / 8}px)`
 
-		if (window.pageYOffset > 5) {
+		if (window.pageYOffset > 1) {
 			mainBlock.current.style.display = 'flex'
 		}
 	}, [theme.isActive])
@@ -92,6 +84,8 @@ const MainPage = props => {
 		return () => window.removeEventListener("scroll", handleScrollMain)
 	}, [theme.isActive, handleScrollMain])
 
+
+
 	const clickScroll = () => {
 		setTimeout(() => window.scrollBy({
 			top: 700,
@@ -99,14 +93,6 @@ const MainPage = props => {
 			behavior: 'smooth',
 		}), 150)
 	}
-
-
-	// function handleSetActive(to) {
-	// 	console.log(to);
-	// }
-
-
-
 
 	return (
 		<>
@@ -172,13 +158,10 @@ const MainPage = props => {
 									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main4 }}
-
-
-										activeClass="active"
 										to="site"
 										smooth={true}
 										offset={-100}
-										duration={1000}
+										duration={800}
 									>
 										Сайты
 									</LinkScroll>
@@ -188,12 +171,10 @@ const MainPage = props => {
 									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main5 }}
-
-										activeClass="active"
 										to="land"
 										smooth={true}
 										offset={-100}
-										duration={1000}
+										duration={800}
 									>
 										Лендинги
 									</LinkScroll>
@@ -203,11 +184,10 @@ const MainPage = props => {
 									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main4 }}
-										activeClass="active"
 										to="store"
 										smooth={true}
 										offset={-100}
-										duration={1000}
+										duration={800}
 									>
 										Интернет магазины
 									</LinkScroll>
@@ -216,11 +196,10 @@ const MainPage = props => {
 									<LinkScroll
 										className="land"
 										style={{ color: theme.textH2Main5 }}
-										activeClass="active"
 										to="cor-app"
 										smooth={true}
 										offset={-100}
-										duration={1000}
+										duration={800}
 									>
 										Корпоративные приложения
 									</LinkScroll>
@@ -272,16 +251,15 @@ const MainPage = props => {
 									<div className='flex-item section2__box1'>
 										<div className='box1'>
 											<h2>
-												<Element
-													name="land">
-													<a
-														href='https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0'
-														target='__blank'
-														style={{ color: theme.textH2Main, }}
-													>
-														Лендинг
-													</a>
-												</Element>
+												<a
+													href='https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0'
+													target='__blank'
+													style={{ color: theme.textH2Main, }}
+													id="land"
+													name="land"
+												>
+													Лендинг
+												</a>
 											</h2>
 
 											<img
@@ -400,16 +378,15 @@ const MainPage = props => {
 									<div className="flex-item section3__box1">
 										<div className="box1">
 											<h2>
-												<Element
-													name="site">
-													<a
-														href='https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B9%D1%82'
-														target='__blank'
-														style={{ color: theme.textH2Main }}
-													>
-														Сайт
-													</a>
-												</Element>
+												<a
+													href='https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B9%D1%82'
+													target='__blank'
+													style={{ color: theme.textH2Main }}
+													id="site"
+													name="site"
+												>
+													Сайт
+												</a>
 											</h2>
 
 											<img
@@ -525,16 +502,14 @@ const MainPage = props => {
 									<div className="flex-item section4__box1">
 										<div className="box1">
 											<h2>
-												<Element
-													name="store">
-													<a
-														href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
-														target='__blank'
-														style={{ color: theme.textH2Main }}
-													>
-														<span>Интернет</span> <span>магазин</span>
-													</a>
-												</Element>
+												<a
+													href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
+													target='__blank'
+													style={{ color: theme.textH2Main }}
+													id="store"
+												>
+													<span>Интернет</span> <span>магазин</span>
+												</a>
 											</h2>
 
 											<img
@@ -648,17 +623,15 @@ const MainPage = props => {
 									<div className="flex-item section5__box1">
 										<div className="box1">
 											<h2>
-												<Element
-													name="cor-app">
-													<a
-														href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
-														target='__blank'
-														name='po'
-														style={{ color: theme.textH2Main }}
-													>
-														<span>Корпоративное</span> <span>приложение</span>
-													</a>
-												</Element>
+												<a
+													href='https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD'
+													target='__blank'
+													name='po'
+													style={{ color: theme.textH2Main }}
+													id="cor-app"
+												>
+													<span>Корпоративное</span> <span>приложение</span>
+												</a>
 											</h2>
 
 											<img
@@ -712,7 +685,6 @@ const MainPage = props => {
 												|| (secondBtn && { fontSize: '1.25em' })
 												|| (thirdBtn && { fontSize: '1.75em' })}
 										>Это закрытое приложение (веб приложение или(и) мобильное приложение) только для сотрудников компании. Используется для оптимизации работы компании. Внедрив такое приложение вы можете структурировать большое количество данных, автоматизировать бизнес процессы, повысить эффективность сотрудников, контролировать взаимоотношения с клиентами, эффективно упрвалять цепочками поставок, расширить возможности удаленных сотрудников, наладить быструю связь между отделами, иметь доступ к актульной информации в режиме реального времени, сохранять информацию о личных данных сотрудников, сократить временные и материальные издержки, анализ и многое другое.</p>
-										{/* <span className="more__detailed">Подробнее</span><br /> */}
 										<span
 											style={(firstBtn && { fontSize: '1em' })
 												|| (secondBtn && { fontSize: '1.25em' })
