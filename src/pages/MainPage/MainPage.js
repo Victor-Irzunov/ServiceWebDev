@@ -366,7 +366,8 @@ const MainPage = () => {
 															${require('./images/landing/land_l6mhxu_c_scale,w_1400.webp')} 1400w, 
 															`}
 												src={`${require("./images/landing/land_l6mhxu_c_scale,w_1400.webp")} 1400w`}
-												alt='Разработка лендинга' title="Лендинг" />
+												alt='Разработка лендинга' title="Лендинг"
+											/>
 										</picture>
 									</div>
 								</article>

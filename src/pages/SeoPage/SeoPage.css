@@ -126,21 +126,21 @@
 
 @media screen and (max-width: 428px) {
 	.seo-container h2 {
-		font-size: 1.3em;
+		font-size: 1.5em;
 	}
 
 	.seo-container p {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 }
 
 @media screen and (max-width: 320px) {
 	.seo-container h2 {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 
 	.seo-container p {
-		font-size: 0.8rem;
+		font-size: 1rem;
 	}
 	.link-speed{
 		font-size: 1em;

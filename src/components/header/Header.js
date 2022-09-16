@@ -47,11 +47,11 @@ const Header = props => {
 			<div className="container__header">
 
 				<div className={tech}>
-					<Link to="/">
+					<Link to="/" rel="canonical">
 
 						<div className="logo">
-							<img src={logo} className='logo-png'/>
-							<img src={logo_mobile} className='logo-png mobile'/>
+							<img src={logo} className='logo-png' />
+							<img src={logo_mobile} className='logo-png mobile' />
 
 						</div>
 					</Link>
@@ -60,7 +60,7 @@ const Header = props => {
 				<nav className="nav">
 					<ul>
 						<li>
-							<Link style={{ color: theme.textColor, boxShadow: theme.boxShadowNav }}
+							<Link rel="canonical" style={{ color: theme.textColor, boxShadow: theme.boxShadowNav }}
 								onMouseMove={e => indicator(e.target)}
 								to="/">
 								Главная
@@ -94,7 +94,7 @@ const Header = props => {
 
 
 				<a
-					href="tel:+375291880022"
+					href="tel:+375333511597"
 					className="header__phone"
 					title="Наш рабочий телефон"
 					style={{ color: theme.textColor }}
@@ -102,7 +102,7 @@ const Header = props => {
 					+375 33 351-15-97
 				</a>
 				<a
-					href="tel:+375291880022"
+					href="tel:+375333511597"
 					className="header__phone-icon"
 					title="Наш рабочий телефон"
 					style={{ color: theme.textColor }}
