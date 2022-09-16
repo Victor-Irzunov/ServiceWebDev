@@ -237,5 +237,10 @@
 		margin-right: 3em;
 		margin-bottom: 0.5em;
 	}
-
+	.header__phone-icon {
+		margin-left: 8em;
+	}
+	.header__phone-icon .fa.fa-phone {
+		margin-left: 1em;
+	}
 }

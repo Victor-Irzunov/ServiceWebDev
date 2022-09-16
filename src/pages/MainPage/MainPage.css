@@ -789,5 +789,6 @@
 @media screen and (max-width: 320px) {
 	.header__btn {
 		margin-right: 4em;
+		margin-left: 2em;
 	}
 }

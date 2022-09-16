@@ -170,3 +170,11 @@
 		display: flex;
 	}
 }
+@media screen and (max-width: 320px) {
+	.toggle:before {
+		content: '';
+	}
+	.toggle.active:before {
+		content: 'Закрыть';
+	}
+}

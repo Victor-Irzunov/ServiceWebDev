@@ -124,7 +124,7 @@ const Header = props => {
 						src={!logoTechColor ? lampOn : lampOff}
 						className='header__theme'
 						alt='Сделать сайт лампа'
-						title="Переключение темы"
+						title="Переключение темы на сайте"
 					/>
 				</button>
 
